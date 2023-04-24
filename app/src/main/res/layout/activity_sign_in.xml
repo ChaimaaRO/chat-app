@@ -10,7 +10,9 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF">
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".activities.SignInActivity"
+    android:background="#56daf5">
 
     <LinearLayout
         android:id="@+id/llSignIn"
@@ -24,24 +26,26 @@
             android:id="@+id/etEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Email"
+            android:hint="@string/email"
             android:inputType="textEmailAddress"
-            android:padding="10dp" />
+            android:padding="10dp"
+            android:autofillHints="emailAddress" />
 
         <EditText
             android:id="@+id/etPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Password"
+            android:hint="@string/password"
             android:inputType="textPassword"
-            android:padding="10dp" />
+            android:padding="10dp"
+            android:autofillHints="password" />
 
         <Button
             android:id="@+id/btnSignIn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:text="Sign In" />
+            android:text="@string/sign_in" />
 
         <TextView
             android:id="@+id/tvForgotPassword"
@@ -49,7 +53,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:gravity="center"
-            android:text="Forgot Password?" />
+            android:text="@string/forgot_password" />
 
         <TextView
             android:id="@+id/textCreateNewAccount"
@@ -57,7 +61,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:gravity="center"
-            android:text="Don't have an account? Sign Up" />
+            android:text="@string/don_t_have_an_account_sign_up" />
 
     </LinearLayout>
 
