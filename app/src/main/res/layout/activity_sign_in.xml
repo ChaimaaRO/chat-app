@@ -26,26 +26,40 @@
             android:id="@+id/etEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:autofillHints="emailAddress"
             android:hint="@string/email"
             android:inputType="textEmailAddress"
-            android:padding="10dp"
-            android:autofillHints="emailAddress" />
+            android:padding="10dp" />
 
         <EditText
             android:id="@+id/etPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:autofillHints="password"
             android:hint="@string/password"
             android:inputType="textPassword"
-            android:padding="10dp"
-            android:autofillHints="password" />
-
-        <Button
-            android:id="@+id/btnSignIn"
+            android:padding="10dp" />
+        <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:text="@string/sign_in" />
+            android:animateLayoutChanges="true">
+            <Button
+                android:id="@+id/btnSignIn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/sign_in" />
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center"
+                android:visibility="invisible"/>
+
+        </FrameLayout>
+
+
 
         <TextView
             android:id="@+id/tvForgotPassword"
